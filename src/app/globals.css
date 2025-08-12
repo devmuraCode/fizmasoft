@@ -1,8 +1,36 @@
 @import "tailwindcss";
+.container_custom {
+  max-width: 1310px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo {
+  width: 188px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 :root {
+
+
   --background: #ffffff;
   --foreground: #171717;
+  --color-border: #5b6296;
+  --color-menuitem: #5b6296;
+  --color-text: #a5c3ff;
+  --color-text-heading: #a5c3ff;
+
+  --heading-h1-size: 90px;
+  --heading-h2-size: 70px;
+  --heading-h3-size: 30px;
+  --text-size: 18px;
+  --line-height: 160%;
+
+  --font-weight-normal: 400;
+
+
 }
 
 @theme inline {
