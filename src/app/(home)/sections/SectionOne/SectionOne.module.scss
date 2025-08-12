@@ -2,6 +2,13 @@
   display: flex;
   gap: 2rem;
   align-items: center;
+  .description {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0%;
+  }
 
   .title {
     font-size: var(--heading-h1-size);

@@ -53,7 +53,7 @@ export const SectionOne = () => {
               Innovative <span>Software</span> and <span>Security</span>{" "}
               Solutions
             </h1>
-            <p>
+            <p className={styles.description}>
               Since 2013, we have been providing your business with digital
               security and automation technologies.
             </p>
