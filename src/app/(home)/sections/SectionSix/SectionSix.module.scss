@@ -1,0 +1,57 @@
+.wrapper {
+  padding: 20px;
+  background: #02020A;
+  position: relative;
+}
+
+.title {
+  font-size: var(--heading-h2-size);
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-style: Medium;
+  letter-spacing: -1%;
+  text-align: center;
+  text-transform: uppercase;
+
+  text-transform: uppercase;
+  span {
+    color: var(--color-text-heading);
+  }
+}
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 20px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.slide {
+  background: #07091a;
+  width: 547px;
+  height: 316px;
+  opacity: 1;
+  padding: 11px 54px;
+  gap: 15px;
+  border-radius: 32.66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 32px;
+  line-height: 110.00000000000001%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    color: var(--color-text-heading);
+  }
+}

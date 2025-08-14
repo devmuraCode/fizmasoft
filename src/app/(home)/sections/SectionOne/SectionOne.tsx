@@ -1,52 +1,17 @@
+import { AnimatedButton } from "./button/AnimatedButton";
 import styles from "./SectionOne.module.scss";
-import button_icon from "@/assets/button_icon.svg";
-import Image from "next/image";
+import { FaLinkedinIn } from "react-icons/fa";
+
 export const SectionOne = () => {
   return (
     <div className={styles.wrapper}>
       <div className="container_custom">
         <div className={styles.header}>
           <div className={styles.button_group}>
-            <button className={styles.button}>
-              Button 1{" "}
-              <Image
-                src={button_icon}
-                alt="Arrow Right Icon"
-                width={16}
-                height={16}
-                className={styles.icon}
-              />
-            </button>
-            <button className={styles.button}>
-              Button 2{" "}
-              <Image
-                src={button_icon}
-                alt="Arrow Right Icon"
-                width={16}
-                height={16}
-                className={styles.icon}
-              />
-            </button>
-            <button className={styles.button}>
-              Button 3{" "}
-              <Image
-                src={button_icon}
-                alt="Arrow Right Icon"
-                width={16}
-                height={16}
-                className={styles.icon}
-              />
-            </button>
-            <button className={styles.button}>
-              Button 3{" "}
-              <Image
-                src={button_icon}
-                alt="Arrow Right Icon"
-                width={16}
-                height={16}
-                className={styles.icon}
-              />
-            </button>
+            <AnimatedButton text="Linkedin" icon={<FaLinkedinIn />} expanded />
+            <AnimatedButton text="Linkedin" icon={<FaLinkedinIn />} />
+            <AnimatedButton text="Linkedin" icon={<FaLinkedinIn />} />
+            <AnimatedButton text="Linkedin" icon={<FaLinkedinIn />} />
           </div>
           <div className={styles.content}>
             <h1 className={styles.title}>
@@ -54,8 +19,8 @@ export const SectionOne = () => {
               Solutions
             </h1>
             <p className={styles.description}>
-              Since 2013, we have been providing your business with digital
-              security and automation technologies.
+              Since 2013, we have been providing your business with <br />{" "}
+              digital security and automation technologies.
             </p>
           </div>
         </div>

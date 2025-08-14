@@ -1,6 +1,6 @@
 .wrapper {
-  background: #02020a;
-  padding: 1rem 0;
+   padding: 5rem 0;
+   background: #02020A;
   .nav {
     display: flex;
     align-items: center;
@@ -15,17 +15,31 @@
     border-left: none;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
-    width: 1079;
-    height: 52;
+    width: 100%;
+    height: 52px;
     top: 29px;
     left: 324px;
     opacity: 1;
     border-width: 1px;
+
     .menu {
       display: flex;
       align-items: center;
-      padding: 0 1rem;
-      gap: 48px;
+      justify-content: center;
+      padding: 0 20px;
+      gap: 20px;
+      a {
+        font-family: Mulish;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        text-decoration: none;
+        color: #A5C3FF;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: right;
+        text-transform: uppercase;
+      }
     }
   }
 }

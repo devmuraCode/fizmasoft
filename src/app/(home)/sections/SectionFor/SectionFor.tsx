@@ -6,7 +6,7 @@ export const SectionFor = () => {
       <div className="container_custom">
         <div className={styles.content}>
           <h2 className={styles.title}>
-            Our <span> clients</span> are <span> successful people</span> who
+            Our<span> clients</span> are <span> successful people</span> who
             <span> entrusted</span> us with their investments and received
             <span> excellent results</span>
           </h2>

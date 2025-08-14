@@ -1,0 +1,72 @@
+.wrapper {
+  padding: 20px 0;
+  background: #02020A;
+}
+
+.partners {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #101224;
+  padding: 20px 0;
+  transform: rotate(-5deg);
+  transform-origin: center;
+}
+
+.textContainer {
+  background: #101224;
+  width: 100%;
+  height: 388px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(5deg);
+  text-align: center;
+  z-index: 1;
+}
+
+.textContainer h2 {
+  color: #a5c3ff;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logoContainer {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 188px;
+  height: 70px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    transform: rotate(0deg);
+  }
+  .textContainer {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  .logo {
+    width: 150px;
+    height: 56px;
+  }
+}
