@@ -1,0 +1,32 @@
+.logoContainer {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+
+.wrapper {
+  transform: rotate(-5deg);
+  position: absolute;
+  bottom: 250px;
+  overflow: hidden; 
+  width: 100%;
+}
+
+.logo {
+  width: 188px;
+  height: 70px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}

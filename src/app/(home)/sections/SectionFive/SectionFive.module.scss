@@ -1,72 +1,56 @@
 .wrapper {
-  padding: 20px 0;
-  background: #02020A;
+  padding: 5rem 0 3rem 0;
+  background: #02020a;
+  position: relative;
 }
 
 .partners {
   width: 100%;
-  overflow: hidden;
-  position: relative;
-  background: #101224;
   padding: 20px 0;
-  transform: rotate(-5deg);
+  overflow: hidden;
   transform-origin: center;
 }
 
 .textContainer {
-  background: #101224;
+  background: url(../../../../assets/bgshapes.png) no-repeat center center;
   width: 100%;
   height: 388px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(5deg);
-  text-align: center;
   z-index: 1;
 }
 
-.textContainer h2 {
-  color: #a5c3ff;
-  font-size: 30px;
-  font-weight: 400;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.logoContainer {
+.content {
   display: flex;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-  padding: 10px 0;
+  gap: 40px;
+  padding: 1rem 3rem;
 }
 
-.logo {
-  width: 188px;
-  height: 70px;
-  margin-right: 20px;
-  flex-shrink: 0;
-  opacity: 0.8;
+.box {
+  position: relative;
+  display: inline-block;
+  top: 65px;
+  width: 86px;
+  height: 46px;
+  border: 1px solid #a5c3ff;
+  border-radius: 100px;
+  margin: 10px 0;
+
+  img {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+  }
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+.textContainer h2 {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 40px;
+  letter-spacing: -1%;
+  text-transform: uppercase;
 
-@media (max-width: 768px) {
-  .partners {
-    transform: rotate(0deg);
-  }
-  .textContainer {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  .logo {
-    width: 150px;
-    height: 56px;
+  span {
+    color: #A5C3FF;
   }
 }
