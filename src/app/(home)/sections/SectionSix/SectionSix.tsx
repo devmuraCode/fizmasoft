@@ -5,6 +5,13 @@ import qayrat from "@/assets/qayrat.svg";
 import azamjon from "@/assets/azamjon.svg";
 import Image from "next/image";
 
+const team = [
+  { img: qayrat, name: "ARIF BOZOROV", role: "PROJECT MANAGER" },
+  { img: azamjon, name: "AZAMJON RAHIMOV", role: "CEO OF FIZMASOFT" },
+  { img: qayrat, name: "KAYRAT URAZOV", role: "PROJECT MANAGER" },
+  { img: azamjon, name: "SHUHRATULLO NURMUKHAMAD", role: "PROJECT MANAGER" },
+];
+
 export const SectionSix = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -38,30 +45,15 @@ export const SectionSix = () => {
         Our <span>friendly</span> <br /> and <span>hardworking</span> team
       </h2>
       <div className={styles.carousel} ref={carouselRef}>
-        <div className={styles.slide}>
-          <Image src={qayrat} alt="Qayrat Bozorov" />
-          <p className={styles.name}>
-            ARIF BOZOROV <span>PROJECT MANAGER</span>
-          </p>
-        </div>
-        <div className={styles.slide}>
-          <Image src={azamjon} alt="Qayrat Bozorov" />
-          <p className={styles.name}>
-            AZAMJON RAHIMOV <span>CEO OF FIZMASOFT</span>
-          </p>
-        </div>
-        <div className={styles.slide}>
-          <Image src={qayrat} alt="Qayrat Bozorov" />
-          <p className={styles.name}>
-            KAYRAT URAZOV <span>PROJECT MANAGER</span>
-          </p>
-        </div>
-        <div className={styles.slide}>
-          <Image src={azamjon} alt="Qayrat Bozorov" />
-          <p className={styles.name}>
-            SHUHRATULLO NURMUKHAMAD <span>PROJECT MANAGER</span>
-          </p>
-        </div>
+        {team.map((member, i) => (
+          <div key={i} className={styles.slide}>
+            <Image src={member.img} alt={member.name} />
+            <p className={styles.name}>
+              {member.name} <br />
+              <span>{member.role}</span>
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import Logo from "@/components/Navbar/Logo/Logo";
 import styles from "./SectionEight.module.scss";
-import Link from "next/link";
+
 export const SectionEight = () => {
   return (
     <div className={styles.wrapper}>
@@ -9,14 +9,14 @@ export const SectionEight = () => {
           <div className={styles.navbar}>
             <Logo />
             <div className={styles.menu}>
-              <a href="phone" className={styles.link}>
+              <a href="tel:+998555020404" className={styles.link}>
                 +998 55 502 04 04
               </a>
-              <a href="mailato:info@fizmasoft.uz">info@fizmasoft.uz</a>
+              <a href="mailto:info@fizmasoft.uz">info@fizmasoft.uz</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};

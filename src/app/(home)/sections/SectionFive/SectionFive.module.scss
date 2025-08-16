@@ -13,26 +13,30 @@
 
 .textContainer {
   background: url(../../../../assets/bgshapes.png) no-repeat center center;
+  background-size: contain;
   width: 100%;
   height: 388px;
   z-index: 1;
+  display: flex;
+  align-items: start;
 }
 
 .content {
   display: flex;
+  align-items: end;
   gap: 40px;
   padding: 1rem 3rem;
+  align-items: center;
 }
 
 .box {
   position: relative;
   display: inline-block;
-  top: 65px;
+  top: 15px;
   width: 86px;
   height: 46px;
   border: 1px solid #a5c3ff;
   border-radius: 100px;
-  margin: 10px 0;
 
   img {
     position: absolute;
@@ -45,12 +49,75 @@
 
 .textContainer h2 {
   font-weight: 500;
-  font-style: Medium;
   font-size: 40px;
   letter-spacing: -1%;
   text-transform: uppercase;
+  margin: 0;
 
   span {
     color: #A5C3FF;
+  }
+}
+
+@media (max-width: 1024px) {
+  .textContainer {
+    height: 300px;
+  }
+
+  .textContainer h2 {
+    font-size: 32px;
+  }
+
+  .box {
+    width: 70px;
+    height: 40px;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .textContainer {
+    height: 220px;
+    padding: 0 1rem;
+  }
+
+  .textContainer h2 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .box {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContainer {
+    height: 180px;
+  }
+
+  .textContainer h2 {
+    font-size: 20px;
+  }
+
+  .box {
+    width: 60px;
+    height: 36px;
+
+    img {
+      width: 12px;
+      height: 12px;
+    }
   }
 }

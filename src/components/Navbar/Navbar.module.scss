@@ -1,5 +1,5 @@
 .wrapper {
-  background: #02020A99; /* Semi-transparent dark background */
+  background: #02020a99;
   padding: 1rem 0;
   position: sticky;
   top: 0.1px;
@@ -26,14 +26,61 @@
   border-bottom-right-radius: 100px;
   width: 100%;
   height: 52px;
-  padding: 0 1rem;
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
+  padding: 0 1rem 0 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
+
+/* ... твой код сверху */
 
 .menu {
   display: flex;
   align-items: center;
   padding: 0 1rem;
   gap: 48px;
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #101224;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 20px;
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+
+    &.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}
+
+.desktopButton {
+  display: block;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.mobileButton {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
 }

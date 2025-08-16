@@ -8,7 +8,7 @@ export const SectionThree = () => {
     <section className={styles.wrapper}>
       <div className="container_custom">
         <div className={styles.inner}>
-          {/* Левая колонка */}
+        
           <div className={styles.left}>
             <div className={styles.infoCard}>
               <h2 className={styles.title}>

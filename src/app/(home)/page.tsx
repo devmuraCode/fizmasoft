@@ -11,15 +11,15 @@ import { SectionTwo } from "./sections/SectionTwo/SectionTwo";
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <SectionOne />
       <SectionTwo />
-      <SectionThree />
-      <SectionFor />
-      <SectionFive />
-      <SectionSix />
-      <SectionSeven />
-      <SectionEight />
+      {/* <SectionThree /> */}
+      {/* <SectionFor /> */}
+      {/* <SectionFive /> */}
+      {/* <SectionSix /> */}
+      {/* <SectionSeven /> */}
+      {/* <SectionEight /> */}
     </div>
   );
 }

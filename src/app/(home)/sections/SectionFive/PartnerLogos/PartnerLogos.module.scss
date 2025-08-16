@@ -30,3 +30,33 @@
     transform: translateX(-50%); 
   }
 }
+
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 140px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    bottom: 150px;
+  }
+
+  .logo {
+    width: 110px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    bottom: 100px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 36px;
+  }
+}

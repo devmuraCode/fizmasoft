@@ -9,10 +9,12 @@ export const SectionSeven = () => {
       <div className="container_custom">
         <h1 className={styles.title}>
           Lets realize your idea <br />
+           
           <span className={styles.box}>
             <Image src={arrow} alt="box" />
           </span>
-          together!
+
+           together!
           <br />
           <span>Contact us today</span>
         </h1>

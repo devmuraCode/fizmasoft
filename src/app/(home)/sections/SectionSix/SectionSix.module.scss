@@ -1,61 +1,122 @@
 .wrapper {
-  padding: 20px;
+  padding: 40px 20px;
   background: #02020a;
   position: relative;
 }
-.slide_black {
-  background: rgba(7, 9, 26, 1);
-  opacity: 0.5;
-}
 
 .title {
-  font-size: var(--heading-h2-size);
-  margin-bottom: 20px;
+  font-size: 48px;
+  margin-bottom: 30px;
   font-weight: 500;
-  font-style: Medium;
-  letter-spacing: -1%;
   text-align: center;
   text-transform: uppercase;
 
-  text-transform: uppercase;
   span {
     color: var(--color-text-heading);
   }
 }
+
 .carousel {
   display: grid;
   grid-auto-flow: column;
-  scroll-behavior: auto;
   gap: 20px;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .slide {
   background: #07091a;
   width: 547px;
   height: 316px;
-  opacity: 1;
-  padding: 11px 54px;
-  gap: 15px;
-  border-radius: 32.66px;
+  border-radius: 32px;
+  padding: 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  scroll-snap-align: center;
+  transition: opacity 0.3s ease;
 }
 
 .name {
+  margin-top: 15px;
   font-weight: 500;
-  font-style: Medium;
-  font-size: 32px;
-  line-height: 110.00000000000001%;
-  letter-spacing: 0%;
+  font-size: 28px;
   text-align: center;
   text-transform: uppercase;
+
   span {
     color: var(--color-text-heading);
+    display: block;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 38px;
+  }
+
+  .slide {
+    width: 400px;
+    height: 260px;
+    padding: 16px 30px;
+  }
+
+  .name {
+    font-size: 22px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .slide {
+    width: 280px;
+    height: 200px;
+    padding: 14px 20px;
+  }
+
+  .name {
+    font-size: 18px;
+
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .slide {
+    width: 220px;
+    height: 160px;
+    padding: 10px 16px;
+    border-radius: 20px;
+  }
+
+  .name {
+    font-size: 16px;
+
+    span {
+      font-size: 11px;
+    }
   }
 }
