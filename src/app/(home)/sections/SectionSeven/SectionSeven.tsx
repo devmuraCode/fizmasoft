@@ -21,7 +21,7 @@ export const SectionSeven = () => {
 
         <div className={styles.boxes}>
           <div className={styles.contacts}>
-            <h2 className={styles.contactTitle}>
+            <h2 className={styles.contacTitle}>
               If you could not find the information you were looking for, call
               or contact us
             </h2>

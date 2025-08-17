@@ -15,20 +15,17 @@ export const Navbar = () => {
           <div className={styles.navbar}>
             <Logo />
 
-            {/* меню (и на мобилке, и на десктопе) */}
             <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
               <MenuItem label="services" />
               <MenuItem label="About" />
               <MenuItem label="partners" />
               <MenuItem label="team" />
 
-              {/* на мобилке кнопка здесь */}
               <div className={styles.mobileButton}>
                 <Button label="Contact" variant="secondary" />
               </div>
             </div>
 
-            {/* бургер */}
             <button
               className={`${styles.burger} ${isOpen ? styles.active : ""}`}
               onClick={() => setIsOpen(!isOpen)}
@@ -39,8 +36,6 @@ export const Navbar = () => {
               <span />
             </button>
           </div>
-
-          {/* на десктопе кнопка справа */}
           <div className={styles.desktopButton}>
             <Button label="Contact" variant="secondary" />
           </div>

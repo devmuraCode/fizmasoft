@@ -25,7 +25,6 @@ export const SectionThree = () => {
             </div>
           </div>
 
-          {/* Правая колонка */}
           <div className={styles.right}>
             <h2 className={styles.title_right}>
               FOUNDED WITH <br />

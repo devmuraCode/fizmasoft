@@ -6,7 +6,7 @@ export const SectionEight = () => {
     <div className={styles.wrapper}>
       <div className="container_custom">
         <div className={styles.nav}>
-          <div className={styles.navbar}>
+          <div className={styles.footer}>
             <Logo />
             <div className={styles.menu}>
               <a href="tel:+998555020404" className={styles.link}>
