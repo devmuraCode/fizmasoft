@@ -1,3 +1,4 @@
+"use client";
 import styles from "./SectionFive.module.scss";
 import { PartnerLogos } from "./PartnerLogos/PartnerLogos";
 import arrow from "@/assets/arrow.svg";

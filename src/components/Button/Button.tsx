@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import styles from "./Button.module.scss";
 import button_icon from "@/assets/button_icon.svg";

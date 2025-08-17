@@ -1,3 +1,4 @@
+"use client";
 import styles from "./SectionThree.module.scss";
 import code from "@/assets/code.png";
 import { Button } from "@/components/Button/Button";
@@ -8,7 +9,6 @@ export const SectionThree = () => {
     <section className={styles.wrapper}>
       <div className="container_custom">
         <div className={styles.inner}>
-        
           <div className={styles.left}>
             <div className={styles.infoCard}>
               <h2 className={styles.title}>

@@ -4,7 +4,7 @@ interface HeadingProps {
   text: string;
   highlights?: string[];
   highlightClass?: string;
-  className?: string; // Allow custom classes for size or additional styles
+  className?: string;
 }
 
 const Heading: React.FC<HeadingProps> = ({

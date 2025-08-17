@@ -1,3 +1,4 @@
+"use client";
 import styles from "./SectionFor.module.scss";
 
 export const SectionFor = () => {

@@ -17,7 +17,8 @@ interface ServiceCard {
   img: StaticImageData;
   title: string;
   desc: string;
-  className: string; // Use className instead of radius string
+  className?: string;
+  borderRadius?: string;
 }
 
 export const SectionTwo: FC = () => {
@@ -28,37 +29,37 @@ export const SectionTwo: FC = () => {
       img: webImg,
       title: "Web Development",
       desc: "We offer various web services, including website design, plugin creation, and front/back-end application updates.",
-      className: styles.cardTopLeft,
+      borderRadius: '20px 0 0 0', 
     },
     {
       img: androidImg,
       title: "Android Development",
       desc: "iParent is one of the best projects of our android developers. Besides making service, providing applications.",
-      className: styles.cardTopRight,
+      borderRadius: '0 20px 0 0', 
     },
     {
       img: iosImg,
       title: "iOS Development",
       desc: "Our iOS developers create apps to meet customers' specific needs and work in iOS like professionals.",
-      className: styles.cardMiddleRight,
+      borderRadius: '0 0 0 0', 
     },
     {
       img: desktopImg,
       title: "Desktop Development",
       desc: "We can offer several types of web-services which includes designing web-site, creating plugins and changing front/back.",
-      className: styles.cardBottomLeft,
+      borderRadius: '0 0 0 0', 
     },
     {
       img: serverImg,
       title: "Server Side Solutions",
       desc: "iParent is one of the best projects of our android developers. Besides making service, providing applications.",
-      className: styles.cardBottomMiddle,
+      borderRadius: '0 0 0 0', 
     },
     {
       img: aiImg,
       title: "AI Solutions",
       desc: "Our AI experts develop intelligent systems to solve problems, automate processes, and deliver smart, data-driven results.",
-      className: styles.cardBottomRight,
+      borderRadius: '0 0 20px 0', 
     },
   ];
   const handleClick = (index: number) => {
@@ -90,47 +91,50 @@ export const SectionTwo: FC = () => {
         </div>
 
         <div className="container_custom">
-          <div className={styles.content}>
-            <div className={styles.contentWrapper}>
-              <div className={styles.header}>
-                <div className={styles.left}>
-                  <h2 id="services-heading" className={styles.title}>
-                    MAIN <br />
-                    <span>SERVICES</span> WE <br />
-                    PROVIDE
-                  </h2>
-                  <span className={styles.box}>
-                    <Image
-                      src={arrow}
-                      alt=""
-                      width={16}
-                      height={16}
-                      aria-hidden="true"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <div className={styles.grid}>
-                {services.map((service, idx) => (
-                  <article
-                    className={`${styles.card} ${service.className}`}
-                    key={`service-${idx}`}
-                  >
-                    <div className={styles.imgWrap}>
+          <div className={styles.contentWrapper}>
+            <div className={styles.content}>
+              <div>
+                <div className={styles.header}>
+                  <div className={styles.left}>
+                    <h2 id="services-heading" className={styles.title}>
+                      MAIN <br />
+                      <span>SERVICES</span> WE <br />
+                      PROVIDE
+                    </h2>
+                    <span className={styles.box}>
                       <Image
-                        src={service.img}
+                        src={arrow}
                         alt=""
-                        width={80}
-                        height={80}
-                        className={styles.serviceIcon}
+                        width={16}
+                        height={16}
                         aria-hidden="true"
                       />
-                    </div>
-                    <h3 className={styles.cardTitle}>{service.title}</h3>
-                    <p className={styles.cardDesc}>{service.desc}</p>
-                  </article>
-                ))}
+                    </span>
+                  </div>
+                </div>
+
+                <div className={styles.grid}>
+                  {services.map((service, idx) => (
+                    <article
+                      className={styles.card}
+                      key={`service-${idx}`}
+                      style={{ borderRadius: service.borderRadius }}
+                    >
+                      <div className={styles.imgWrap}>
+                        <Image
+                          src={service.img}
+                          alt=""
+                          width={80}
+                          height={80}
+                          className={styles.serviceIcon}
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <h3 className={styles.cardTitle}>{service.title}</h3>
+                      <p className={styles.cardDesc}>{service.desc}</p>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

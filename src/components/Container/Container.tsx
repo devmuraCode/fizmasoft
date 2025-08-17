@@ -1,5 +1,5 @@
 "use client";
-import "../../styles/global.scss"; // Import the SCSS file
+import "../../styles/global.scss"; 
 
 interface ContainerProps {
   children: React.ReactNode;

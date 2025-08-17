@@ -18,19 +18,14 @@ export const PartnerLogos = () => {
             className={styles.logo}
           />
         ))}
-        {logos.map(
-          (
-            logo,
-            index 
-          ) => (
-            <Image
-              key={`set2-${index}`}
-              src={logo}
-              alt="Partner Logo"
-              className={styles.logo}
-            />
-          )
-        )}
+        {logos.map((logo, index) => (
+          <Image
+            key={`set2-${index}`}
+            src={logo}
+            alt="Partner Logo"
+            className={styles.logo}
+          />
+        ))}
       </div>
     </div>
   );
