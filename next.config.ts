@@ -7,12 +7,14 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  webpack: (config) => {
+  webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
+      issuer: {
+        and: [/\.(js|ts|jsx|tsx)$/],
+      },
       use: ["@svgr/webpack"],
     });
-
     return config;
   },
 
