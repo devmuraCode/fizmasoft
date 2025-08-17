@@ -4,7 +4,6 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./SectionTwo.module.scss";
 
 // Assets
-import man from "@/assets/man.png";
 import webImg from "@/assets/web.png";
 import androidImg from "@/assets/android.png";
 import iosImg from "@/assets/ios.png";
@@ -18,7 +17,7 @@ interface ServiceCard {
   img: StaticImageData;
   title: string;
   desc: string;
-  radius: string;
+  className: string; // Use className instead of radius string
 }
 
 export const SectionTwo: FC = () => {
@@ -29,37 +28,37 @@ export const SectionTwo: FC = () => {
       img: webImg,
       title: "Web Development",
       desc: "We offer various web services, including website design, plugin creation, and front/back-end application updates.",
-      radius: "20px 0 0 20px",
+      className: styles.cardTopLeft,
     },
     {
       img: androidImg,
       title: "Android Development",
       desc: "iParent is one of the best projects of our android developers. Besides making service, providing applications.",
-      radius: "0 20px 0 20px",
+      className: styles.cardTopRight,
     },
     {
       img: iosImg,
       title: "iOS Development",
       desc: "Our iOS developers create apps to meet customers' specific needs and work in iOS like professionals.",
-      radius: "20px 20px 20px 0",
+      className: styles.cardMiddleRight,
     },
     {
       img: desktopImg,
       title: "Desktop Development",
       desc: "We can offer several types of web-services which includes designing web-site, creating plugins and changing front/back.",
-      radius: "20px 20px 0 20px",
+      className: styles.cardBottomLeft,
     },
     {
       img: serverImg,
       title: "Server Side Solutions",
       desc: "iParent is one of the best projects of our android developers. Besides making service, providing applications.",
-      radius: "0 0 20px 0",
+      className: styles.cardBottomMiddle,
     },
     {
       img: aiImg,
       title: "AI Solutions",
       desc: "Our AI experts develop intelligent systems to solve problems, automate processes, and deliver smart, data-driven results.",
-      radius: "0 20px 20px 20px",
+      className: styles.cardBottomRight,
     },
   ];
   const handleClick = (index: number) => {
@@ -115,9 +114,8 @@ export const SectionTwo: FC = () => {
               <div className={styles.grid}>
                 {services.map((service, idx) => (
                   <article
-                    className={styles.card}
+                    className={`${styles.card} ${service.className}`}
                     key={`service-${idx}`}
-                    style={{ borderRadius: service.radius }}
                   >
                     <div className={styles.imgWrap}>
                       <Image

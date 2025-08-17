@@ -19,7 +19,7 @@
         rgba(2, 2, 10, 0) 46.77%,
         #02020a 100%
       ),
-      url("/assets/earth.png") no-repeat center center / cover;
+      url("../../../../assets/earth.png") no-repeat center center / cover;
     z-index: -1;
   }
 }
@@ -234,30 +234,77 @@
     padding: 0 1rem;
     gap: 1rem;
   }
+  
+  // Card position-specific border radius classes
+  .cardTopLeft {
+    border-radius: 20px 0 0 20px;
+    @media (max-width: 1024px) {
+      border-radius: 20px 20px 0 0;
+    }
+  }
+  
+  .cardTopRight {
+    border-radius: 0 20px 20px 0;
+    @media (max-width: 1024px) {
+      border-radius: 0 0 0 20px;
+    }
+  }
+  
+  .cardMiddleRight {
+    border-radius: 20px 20px 20px 0;
+  }
+  
+  .cardBottomLeft {
+    border-radius: 20px 20px 0 20px;
+    @media (max-width: 1024px) {
+      border-radius: 20px 0 0 0;
+    }
+  }
+  
+  .cardBottomMiddle {
+    border-radius: 0 0 20px 0;
+  }
+  
+  .cardBottomRight {
+    border-radius: 0 20px 20px 20px;
+    @media (max-width: 1024px) {
+      border-radius: 0 20px 0 0;
+    }
+  }
 
   .card {
-    background: #161b33;
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: left;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
 
     &:hover {
       transform: translateY(-5px);
     }
-
+    
     .imgWrap {
       margin-bottom: 1rem;
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      
       img {
-        width: 160px;
-        height: 60px;
+        max-width: 100%;
+        height: auto;
+        max-height: 60px;
         object-fit: contain;
 
         @media (max-width: 768px) {
-          width: 120px;
-          height: 40px;
+          max-width: 120px;
+          max-height: 40px;
         }
       }
     }
