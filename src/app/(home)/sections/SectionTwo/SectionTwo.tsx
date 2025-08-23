@@ -35,31 +35,31 @@ export const SectionTwo: FC = () => {
       img: androidImg,
       title: "Android Development",
       desc: "iParent is one of the best projects of our android developers. Besides making service, providing applications.",
-      borderRadius: '0 20px 0 0', 
+      borderRadius: '0 20px 0 20px', 
     },
     {
       img: iosImg,
       title: "iOS Development",
       desc: "Our iOS developers create apps to meet customers' specific needs and work in iOS like professionals.",
-      borderRadius: '0 0 0 0', 
+      borderRadius: '20px 20px 20px 0', 
     },
     {
       img: desktopImg,
       title: "Desktop Development",
       desc: "We can offer several types of web-services which includes designing web-site, creating plugins and changing front/back.",
-      borderRadius: '0 0 0 0', 
+      borderRadius: '20px 20px 20px 0', 
     },
     {
       img: serverImg,
       title: "Server Side Solutions",
       desc: "iParent is one of the best projects of our android developers. Besides making service, providing applications.",
-      borderRadius: '0 0 0 0', 
+      borderRadius: '0 0 20px 0', 
     },
     {
       img: aiImg,
       title: "AI Solutions",
       desc: "Our AI experts develop intelligent systems to solve problems, automate processes, and deliver smart, data-driven results.",
-      borderRadius: '0 0 20px 0', 
+      borderRadius: '0 20px 20px 20px', 
     },
   ];
   const handleClick = (index: number) => {
