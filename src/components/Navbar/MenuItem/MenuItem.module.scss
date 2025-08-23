@@ -8,4 +8,9 @@
   color: var(--color-menuitem);
   text-align: right;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    color: white;
+  }
 }
